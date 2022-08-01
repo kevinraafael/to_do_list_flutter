@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
+import 'package:to_do_list_flutter/core/app_colors.dart';
 import 'package:to_do_list_flutter/models/to_do.dart';
 
 class TodoListItem extends StatelessWidget {
@@ -30,13 +31,14 @@ class TodoListItem extends StatelessWidget {
             children: [
               Text(
                 DateFormat('dd/MM/yyyy - HH:mm').format(todo.dateTime),
+                style: TextStyle(color: AppColors.primaryText),
               ),
               Text(
                 todo.title,
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.taskTitle),
               ),
             ],
           ),
@@ -45,7 +47,7 @@ class TodoListItem extends StatelessWidget {
         actionPane: SlidableStrechActionPane(),
         secondaryActions: [
           IconSlideAction(
-            color: Colors.red,
+            color: AppColors.delete,
             icon: Icons.delete,
             onTap: () {
               onDelete(todo);
