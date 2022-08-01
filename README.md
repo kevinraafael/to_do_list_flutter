@@ -3,7 +3,7 @@
 A new Flutter project  aimed at adding and deleting tasks
 
 <p align="center">
-    <img width="600" src="/assets/to_do_.gif">
+    <img width="600" src="/assets/to_do_gif.gif">
  </p
 
 ## Getting Started
